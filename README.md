@@ -1,7 +1,9 @@
 # 32-Bit Single-Core RISC Processor Core
 
-
-
+<p>
+<a href="documentation/processorDiagram.png">
+  <img src="documentation/processorDiagram.png" alt="Processor Architecture">
+</a>
 A custom-designed, 32-bit single-core unpipelined RISC processor architecture implemented from scratch in Verilog HDL. This project serves as a comprehensive exploration of hardware description languages, computer architecture principles, and hardware-software co-design.
 
 Alongside the processor core, this repository includes a custom-built software ecosystem featuring a Python-based assembler and disassembler toolchain.
