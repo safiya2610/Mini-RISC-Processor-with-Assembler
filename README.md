@@ -1,8 +1,8 @@
 # 32-Bit Single-Core RISC Processor Core
 
 <p>
-<a href="documentation/processorDiagram.png">
-  <img src="documentation/processorDiagram.png" alt="Processor Architecture">
+<a href="docs/processorDiagram.png">
+  <img src="docs/processorDiagram.png" alt="Processor Architecture">
 </a>
 A custom-designed, 32-bit single-core unpipelined RISC processor architecture implemented from scratch in Verilog HDL. This project serves as a comprehensive exploration of hardware description languages, computer architecture principles, and hardware-software co-design.
 
