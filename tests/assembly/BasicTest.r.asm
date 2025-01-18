@@ -33,10 +33,14 @@
 	OR %r2, %r1, %r3
 	SHL %r1, %r2, %r4
 
-	SHL %r0, %r1, %r0	XOR %r0, %r1, %r0
-	SHL %r0, %r1, %r0	XOR %r0, %r2, %r0
-	SHL %r0, %r1, %r0	XOR %r0, %r3, %r0
-	SHL %r0, %r1, %r0	XOR %r0, %r4, %r0
+	SHL %r0, %r1, %r0
+	XOR %r0, %r1, %r0
+	SHL %r0, %r1, %r0
+	XOR %r0, %r2, %r0
+	SHL %r0, %r1, %r0
+	XOR %r0, %r3, %r0
+	SHL %r0, %r1, %r0
+	XOR %r0, %r4, %r0
 	ST %r0, 0x3FC, %r31	; cycle 14: should write 0x2
 
 	XOR %r4, %r1, %r5
@@ -169,7 +173,7 @@
 	ADDC %r6, 126, %r6
 	CMPLTC %r6, 128, %r7
 	SUBC %r7, -254, %r7
-	CMPLECr31, 7, %r8
+	CMPLEC %r31, 7, %r8
 	ORC %r8, 0x1fe, %r8
 	CMPEQC %r8, 0x1fe, %r9
 	ADDC %r9, 0x3ff, %r9
@@ -284,7 +288,7 @@
        LD %r31, 0, %r2	; location 0
        SHL %r0, %r1, %r0
        XOR %r0, %r2, %r0
-       LDr1,5,r3	; location 8
+       LD %r1, 5, %r3	; location 8
        SHL %r0, %r1, %r0
        XOR %r0, %r3, %r0
        ST %r0,0x3FC,%r31	; cycle 242: should write 0x47A2B9C0
